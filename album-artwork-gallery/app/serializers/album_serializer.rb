@@ -1,4 +1,4 @@
 class AlbumSerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes :title, :tracks, :artist, :origin
 end
