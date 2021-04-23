@@ -41,3 +41,24 @@ FOREIGN KEY ("album_id")
   [1m[36mCover Load (1.4ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["album_id", 2], ["LIMIT", 11]]
   [1m[36mCover Load (0.7ms)[0m  [1m[34mSELECT "covers".* FROM "covers" ORDER BY "covers"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2021-04-23 07:35:26 -0400
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/travis_gandy/.rvm/gems/ruby-3.0.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/travis_gandy/.rvm/gems/ruby-3.0.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 54.9ms | Allocations: 463)
+Completed 200 OK in 322ms (Views: 145.3ms | ActiveRecord: 0.0ms | Allocations: 3922)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-04-23 07:35:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/covers" for 127.0.0.1 at 2021-04-23 07:35:43 -0400
+Processing by Api::V1::CoversController#index as HTML
+  [1m[36mCover Load (1.8ms)[0m  [1m[34mSELECT "covers".* FROM "covers"[0m
+  ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+No serializer found for resource: #<Cover id: 1, image_url: "https://hiphop-n-more.com/wp-content/uploads/2020/...", album_id: 2, stars: 4, created_at: "2021-04-23 06:26:11.229756000 +0000", updated_at: "2021-04-23 06:26:11.229756000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Cover::ActiveRecord_Relation (2.07ms)
+Completed 200 OK in 110ms (Views: 45.4ms | ActiveRecord: 14.6ms | Allocations: 6780)
+
+
