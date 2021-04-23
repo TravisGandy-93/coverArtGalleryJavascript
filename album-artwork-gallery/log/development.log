@@ -62,3 +62,16 @@ No serializer found for resource: #<Cover id: 1, image_url: "https://hiphop-n-mo
 Completed 200 OK in 110ms (Views: 45.4ms | ActiveRecord: 14.6ms | Allocations: 6780)
 
 
+Started GET "/api/v1/covers" for 127.0.0.1 at 2021-04-23 07:54:49 -0400
+Processing by Api::V1::CoversController#index as HTML
+  [1m[36mCover Load (0.6ms)[0m  [1m[34mSELECT "covers".* FROM "covers"[0m
+  ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+No serializer found for resource: #<Cover id: 1, image_url: "https://hiphop-n-more.com/wp-content/uploads/2020/...", album_id: 2, stars: 4, created_at: "2021-04-23 06:26:11.229756000 +0000", updated_at: "2021-04-23 06:26:11.229756000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Cover::ActiveRecord_Relation (0.48ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 7.5ms | Allocations: 2983)
+
+
+Started GET "/routes" for 127.0.0.1 at 2021-04-23 07:54:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
