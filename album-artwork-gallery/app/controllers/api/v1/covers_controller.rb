@@ -2,7 +2,7 @@ class Api::V1::CoversController < ApplicationController
 
 def index
     covers = Cover.all
-    render json: covers
+    render json: CoverSerializer.new(covers)
 end
 
 def create

@@ -1,4 +1,4 @@
 class CoverSerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes :image_url, :stars, :album_id
 end
