@@ -143,3 +143,14 @@ Processing by Api::V1::CoversController#index as HTML
 Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 1.1ms | Allocations: 1863)
 
 
+Started GET "/api/v1/covers" for 127.0.0.1 at 2021-04-23 08:36:17 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::CoversController#index as HTML
+[active_model_serializers]   [1m[36mCover Load (0.7ms)[0m  [1m[34mSELECT "covers".* FROM "covers"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CoverSerializer (111.37ms)
+Completed 200 OK in 226ms (Views: 108.8ms | ActiveRecord: 9.6ms | Allocations: 15713)
+
+
