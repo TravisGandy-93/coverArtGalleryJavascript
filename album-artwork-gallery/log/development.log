@@ -232,3 +232,37 @@ FOREIGN KEY ("album_id")
   [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2934697445138728815)[0m
   [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/v1/albums" for 127.0.0.1 at 2021-04-23 11:24:46 -0400
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AlbumsController#index as HTML
+[active_model_serializers]   [1m[36mAlbum Load (2.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with AlbumSerializer (6.01ms)
+Completed 200 OK in 79ms (Views: 9.2ms | ActiveRecord: 2.7ms | Allocations: 5593)
+
+
+Started GET "/api/v1/covers" for 127.0.0.1 at 2021-04-23 11:25:37 -0400
+Processing by Api::V1::CoversController#index as HTML
+[active_model_serializers]   [1m[36mCover Load (2.4ms)[0m  [1m[34mSELECT "covers".* FROM "covers"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CoverSerializer (5.42ms)
+Completed 200 OK in 43ms (Views: 4.2ms | ActiveRecord: 2.4ms | Allocations: 1940)
+
+
+Started GET "/api/v1/covers" for 127.0.0.1 at 2021-04-23 13:48:46 -0400
+Processing by Api::V1::CoversController#index as */*
+[active_model_serializers]   [1m[36mCover Load (2.4ms)[0m  [1m[34mSELECT "covers".* FROM "covers"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CoverSerializer (117.85ms)
+Completed 200 OK in 147ms (Views: 129.6ms | ActiveRecord: 33.0ms | Allocations: 2859)
+
+
+Started GET "/api/v1/covers" for 127.0.0.1 at 2021-04-23 13:50:15 -0400
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::CoversController#index as */*
+[active_model_serializers]   [1m[36mCover Load (1.0ms)[0m  [1m[34mSELECT "covers".* FROM "covers"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CoverSerializer (4.28ms)
+Completed 200 OK in 104ms (Views: 12.5ms | ActiveRecord: 1.0ms | Allocations: 5209)
+
+
