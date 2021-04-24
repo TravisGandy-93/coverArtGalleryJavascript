@@ -1,3 +1,3 @@
 class Album < ApplicationRecord
-    has_many :covers
+    has_many :covers, dependent: :destroy
 end
