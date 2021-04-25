@@ -2133,3 +2133,657 @@ Processing by Api::V1::AlbumsController#index as HTML
 Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 2.7ms | Allocations: 4705)
 
 
+Started GET "/api/v1/albums" for 127.0.0.1 at 2021-04-24 07:14:45 -0400
+Started GET "/api/v1/covers" for 127.0.0.1 at 2021-04-24 07:14:45 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::CoversController#index as */*
+Processing by Api::V1::AlbumsController#index as */*
+[active_model_serializers]   [1m[36mCover Load (36.3ms)[0m  [1m[34mSELECT "covers".* FROM "covers"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCover Load (0.7ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (1.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCover Load (0.7ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CoverSerializer (187.3ms)
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+Completed 200 OK in 279ms (Views: 106.6ms | ActiveRecord: 89.0ms | Allocations: 22828)
+
+
+[active_model_serializers]   [1m[36mCover Load (0.6ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.7ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with AlbumSerializer (193.95ms)
+Completed 200 OK in 233ms (Views: 143.1ms | ActiveRecord: 55.1ms | Allocations: 21109)
+
+
+Started GET "/api/v1/covers" for 127.0.0.1 at 2021-04-24 07:16:09 -0400
+Started GET "/api/v1/albums" for 127.0.0.1 at 2021-04-24 07:16:09 -0400
+Processing by Api::V1::AlbumsController#index as */*
+Processing by Api::V1::CoversController#index as */*
+[active_model_serializers]   [1m[36mAlbum Load (1.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+[active_model_serializers]   [1m[36mCover Load (0.5ms)[0m  [1m[34mSELECT "covers".* FROM "covers"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.8ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 1]]
+[active_model_serializers]   [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.6ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 2]]
+[active_model_serializers]   [1m[36mAlbum Load (1.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.7ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CoverSerializer (38.23ms)
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+Completed 200 OK in 46ms (Views: 43.4ms | ActiveRecord: 2.4ms | Allocations: 6102)
+
+
+[active_model_serializers]   [1m[36mCover Load (0.7ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with AlbumSerializer (61.19ms)
+Completed 200 OK in 64ms (Views: 58.9ms | ActiveRecord: 4.3ms | Allocations: 7841)
+
+
+Started POST "/api/v1/covers" for 127.0.0.1 at 2021-04-24 07:16:19 -0400
+Processing by Api::V1::CoversController#create as */*
+  Parameters: {"stars"=>"2", "image_url"=>"https://images.squarespace-cdn.com/content/v1/56858337cbced60d3b293aef/1462847491369-8EEB8ULTKATM5RTAIBB3/ke17ZwdGBToddI8pDm48kAimzRZcLvK0oEXDaSEhJIoUqsxRUqqbr1mOJYKfIPR7wHSwpYRrzxWb3AxhO8KtM3sJMl0vR-2oNpY0Cjfj2NxCRW4BPu10St3TBAUQYVKcHRRLeK_yQz-1579Z4YH9U0zxELMl3Q-c7c1bUmF7UnbpKT6qwcugvdX3Sfmishau/image-asset.png?format=1500w", "album_id"=>4, "cover"=>{"image_url"=>"https://images.squarespace-cdn.com/content/v1/56858337cbced60d3b293aef/1462847491369-8EEB8ULTKATM5RTAIBB3/ke17ZwdGBToddI8pDm48kAimzRZcLvK0oEXDaSEhJIoUqsxRUqqbr1mOJYKfIPR7wHSwpYRrzxWb3AxhO8KtM3sJMl0vR-2oNpY0Cjfj2NxCRW4BPu10St3TBAUQYVKcHRRLeK_yQz-1579Z4YH9U0zxELMl3Q-c7c1bUmF7UnbpKT6qwcugvdX3Sfmishau/image-asset.png?format=1500w", "album_id"=>4, "stars"=>"2"}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2039)
+
+
+  
+NameError (undefined local variable or method `cover' for #<Api::V1::CoversController:0x00000000006608>):
+  
+app/controllers/api/v1/covers_controller.rb:20:in `cover_params'
+app/controllers/api/v1/covers_controller.rb:9:in `create'
+Started GET "/api/v1/covers" for 127.0.0.1 at 2021-04-24 07:17:41 -0400
+Started GET "/api/v1/albums" for 127.0.0.1 at 2021-04-24 07:17:41 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AlbumsController#index as */*
+Processing by Api::V1::CoversController#index as */*
+[active_model_serializers]   [1m[36mCover Load (0.8ms)[0m  [1m[34mSELECT "covers".* FROM "covers"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCover Load (0.8ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.6ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CoverSerializer (136.3ms)
+Completed 200 OK in 199ms (Views: 101.8ms | ActiveRecord: 49.3ms | Allocations: 18143)
+
+
+[active_model_serializers]   [1m[36mCover Load (1.3ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.7ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with AlbumSerializer (291.44ms)
+Completed 200 OK in 433ms (Views: 242.6ms | ActiveRecord: 63.7ms | Allocations: 26042)
+
+
+Started POST "/api/v1/covers" for 127.0.0.1 at 2021-04-24 07:17:56 -0400
+Processing by Api::V1::CoversController#create as */*
+  Parameters: {"stars"=>"2", "image_url"=>"https://images.squarespace-cdn.com/content/v1/56858337cbced60d3b293aef/1462847491369-8EEB8ULTKATM5RTAIBB3/ke17ZwdGBToddI8pDm48kAimzRZcLvK0oEXDaSEhJIoUqsxRUqqbr1mOJYKfIPR7wHSwpYRrzxWb3AxhO8KtM3sJMl0vR-2oNpY0Cjfj2NxCRW4BPu10St3TBAUQYVKcHRRLeK_yQz-1579Z4YH9U0zxELMl3Q-c7c1bUmF7UnbpKT6qwcugvdX3Sfmishau/image-asset.png?format=1500w", "album_id"=>4, "cover"=>{"image_url"=>"https://images.squarespace-cdn.com/content/v1/56858337cbced60d3b293aef/1462847491369-8EEB8ULTKATM5RTAIBB3/ke17ZwdGBToddI8pDm48kAimzRZcLvK0oEXDaSEhJIoUqsxRUqqbr1mOJYKfIPR7wHSwpYRrzxWb3AxhO8KtM3sJMl0vR-2oNpY0Cjfj2NxCRW4BPu10St3TBAUQYVKcHRRLeK_yQz-1579Z4YH9U0zxELMl3Q-c7c1bUmF7UnbpKT6qwcugvdX3Sfmishau/image-asset.png?format=1500w", "album_id"=>4, "stars"=>"2"}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+  [1m[36mCover Create (6.7ms)[0m  [1m[32mINSERT INTO "covers" ("image_url", "album_id", "stars", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["image_url", "https://images.squarespace-cdn.com/content/v1/56858337cbced60d3b293aef/1462847491369-8EEB8ULTKATM5RTAIBB3/ke17ZwdGBToddI8pDm48kAimzRZcLvK0oEXDaSEhJIoUqsxRUqqbr1mOJYKfIPR7wHSwpYRrzxWb3AxhO8KtM3sJMl0vR-2oNpY0Cjfj2NxCRW4BPu10St3TBAUQYVKcHRRLeK_yQz-1579Z4YH9U0zxELMl3Q-c7c1bUmF7UnbpKT6qwcugvdX3Sfmishau/image-asset.png?format=1500w"], ["album_id", 4], ["stars", 2], ["created_at", "2021-04-24 11:17:56.291629"], ["updated_at", "2021-04-24 11:17:56.291629"]]
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (18.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Cover (0.35ms)
+Completed 202 Accepted in 49ms (Views: 2.6ms | ActiveRecord: 26.2ms | Allocations: 3648)
+
+
+Started GET "/api/v1/covers" for 127.0.0.1 at 2021-04-24 07:20:08 -0400
+Started GET "/api/v1/albums" for 127.0.0.1 at 2021-04-24 07:20:08 -0400
+Processing by Api::V1::CoversController#index as */*
+Processing by Api::V1::AlbumsController#index as */*
+[active_model_serializers]   [1m[36mCover Load (2.1ms)[0m  [1m[34mSELECT "covers".* FROM "covers"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+[active_model_serializers]   [1m[36mAlbum Load (0.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (2.2ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 1]]
+[active_model_serializers]   [1m[36mAlbum Load (5.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (1.2ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 2]]
+[active_model_serializers]   [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.8ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 3]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CoverSerializer (168.23ms)
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+Completed 200 OK in 173ms (Views: 163.2ms | ActiveRecord: 9.0ms | Allocations: 7296)
+
+
+[active_model_serializers]   [1m[36mCover Load (1.0ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with AlbumSerializer (182.92ms)
+Completed 200 OK in 186ms (Views: 178.5ms | ActiveRecord: 6.1ms | Allocations: 8741)
+
+
+Started GET "/api/v1/covers" for 127.0.0.1 at 2021-04-24 07:24:21 -0400
+Started GET "/api/v1/albums" for 127.0.0.1 at 2021-04-24 07:24:21 -0400
+Processing by Api::V1::CoversController#index as */*
+Processing by Api::V1::AlbumsController#index as */*
+[active_model_serializers]   [1m[36mCover Load (0.5ms)[0m  [1m[34mSELECT "covers".* FROM "covers"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (2.3ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+[active_model_serializers]   [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.6ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (3.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCover Load (1.3ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (3.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.9ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CoverSerializer (61.83ms)
+[active_model_serializers]   [1m[36mCover Load (0.7ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 4]]
+Completed 200 OK in 70ms (Views: 61.6ms | ActiveRecord: 7.7ms | Allocations: 7547)
+
+
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with AlbumSerializer (70.82ms)
+Completed 200 OK in 75ms (Views: 68.4ms | ActiveRecord: 5.8ms | Allocations: 8685)
+
+
+Started POST "/api/v1/albums" for 127.0.0.1 at 2021-04-24 07:26:29 -0400
+Processing by Api::V1::AlbumsController#create as */*
+  Parameters: {"title"=>"Nothing was the Same", "tracks"=>"15", "artist"=>"Drake", "origin"=>"Each song is a lucid story of its own, in which Drake reveals more of himself, from who he was once to who he's becoming. The storytelling is filled with flashbacks, acceptance of wrongdoing and unshakeable pride.\n\n", "album"=>{"origin"=>"Each song is a lucid story of its own, in which Drake reveals more of himself, from who he was once to who he's becoming. The storytelling is filled with flashbacks, acceptance of wrongdoing and unshakeable pride.\n\n", "artist"=>"Drake", "title"=>"Nothing was the Same", "tracks"=>"15"}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/albums_controller.rb:9:in `create'
+  [1m[36mAlbum Create (2.6ms)[0m  [1m[32mINSERT INTO "albums" ("origin", "artist", "title", "tracks", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["origin", "Each song is a lucid story of its own, in which Drake reveals more of himself, from who he was once to who he's becoming. The storytelling is filled with flashbacks, acceptance of wrongdoing and unshakeable pride.\n\n"], ["artist", "Drake"], ["title", "Nothing was the Same"], ["tracks", 15], ["created_at", "2021-04-24 11:26:29.059940"], ["updated_at", "2021-04-24 11:26:29.059940"]]
+  ↳ app/controllers/api/v1/albums_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/albums_controller.rb:9:in `create'
+[active_model_serializers]   [1m[36mCover Load (0.4ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:10:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with AlbumSerializer (6.11ms)
+Completed 200 OK in 37ms (Views: 6.9ms | ActiveRecord: 9.3ms | Allocations: 3052)
+
+
+Started GET "/api/v1/albums" for 127.0.0.1 at 2021-04-24 07:26:29 -0400
+Processing by Api::V1::AlbumsController#index as */*
+[active_model_serializers]   [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.4ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.4ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.5ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.5ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.7ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with AlbumSerializer (32.01ms)
+Completed 200 OK in 34ms (Views: 30.0ms | ActiveRecord: 3.2ms | Allocations: 5721)
+
+
+Started POST "/api/v1/covers" for 127.0.0.1 at 2021-04-24 07:28:06 -0400
+Processing by Api::V1::CoversController#create as */*
+  Parameters: {"stars"=>"5", "image_url"=>"data:image/jpeg;base64,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", "album_id"=>9, "cover"=>{"image_url"=>"data:image/jpeg;base64,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", "album_id"=>9, "stars"=>"5"}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+  [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 2.4ms | Allocations: 2089)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 2)):
+  
+app/controllers/api/v1/covers_controller.rb:13:in `create'
+Started GET "/api/v1/covers" for 127.0.0.1 at 2021-04-24 07:29:48 -0400
+Started GET "/api/v1/albums" for 127.0.0.1 at 2021-04-24 07:29:48 -0400
+Processing by Api::V1::CoversController#index as */*
+[active_model_serializers]   [1m[36mCover Load (0.6ms)[0m  [1m[34mSELECT "covers".* FROM "covers"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+Processing by Api::V1::AlbumsController#index as */*
+[active_model_serializers]   [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CoverSerializer (44.31ms)
+Completed 200 OK in 49ms (Views: 43.8ms | ActiveRecord: 3.1ms | Allocations: 6273)
+
+
+[active_model_serializers]   [1m[36mAlbum Load (2.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (1.0ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.7ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.8ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.8ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.8ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with AlbumSerializer (119.12ms)
+Completed 200 OK in 122ms (Views: 98.6ms | ActiveRecord: 22.4ms | Allocations: 10890)
+
+
+Started POST "/api/v1/covers" for 127.0.0.1 at 2021-04-24 07:30:21 -0400
+Processing by Api::V1::CoversController#create as */*
+  Parameters: {"stars"=>"5", "image_url"=>"https://static.spin.com/files/130905-drake-nothing-was-the-same-album-art-414x276.jpg", "album_id"=>5, "cover"=>{"image_url"=>"https://static.spin.com/files/130905-drake-nothing-was-the-same-album-art-414x276.jpg", "album_id"=>5, "stars"=>"5"}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+  [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+  [1m[36mCover Create (1.4ms)[0m  [1m[32mINSERT INTO "covers" ("image_url", "album_id", "stars", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["image_url", "https://static.spin.com/files/130905-drake-nothing-was-the-same-album-art-414x276.jpg"], ["album_id", 5], ["stars", 5], ["created_at", "2021-04-24 11:30:21.071379"], ["updated_at", "2021-04-24 11:30:21.071379"]]
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Cover (0.43ms)
+Completed 202 Accepted in 34ms (Views: 1.8ms | ActiveRecord: 9.9ms | Allocations: 2835)
+
+
+Started GET "/api/v1/covers" for 127.0.0.1 at 2021-04-24 07:30:21 -0400
+Processing by Api::V1::CoversController#index as */*
+[active_model_serializers]   [1m[36mCover Load (0.4ms)[0m  [1m[34mSELECT "covers".* FROM "covers"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CoverSerializer (37.79ms)
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 3.3ms | Allocations: 4816)
+
+
+Started GET "/api/v1/covers" for 127.0.0.1 at 2021-04-24 07:30:39 -0400
+Started GET "/api/v1/albums" for 127.0.0.1 at 2021-04-24 07:30:39 -0400
+Processing by Api::V1::CoversController#index as */*
+Processing by Api::V1::AlbumsController#index as */*
+[active_model_serializers]   [1m[36mCover Load (0.7ms)[0m  [1m[34mSELECT "covers".* FROM "covers"[0m
+[active_model_serializers]   [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.6ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 1]]
+[active_model_serializers]   [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.7ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 2]]
+[active_model_serializers]   [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.9ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 3]]
+[active_model_serializers]   [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCover Load (0.6ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CoverSerializer (71.69ms)
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+Completed 200 OK in 74ms (Views: 69.8ms | ActiveRecord: 3.4ms | Allocations: 9176)
+
+
+[active_model_serializers]   [1m[36mCover Load (0.6ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with AlbumSerializer (78.69ms)
+Completed 200 OK in 81ms (Views: 76.0ms | ActiveRecord: 4.4ms | Allocations: 10686)
+
+
+Started GET "/api/v1/albums" for 127.0.0.1 at 2021-04-24 07:41:55 -0400
+Processing by Api::V1::AlbumsController#index as HTML
+[active_model_serializers]   [1m[36mAlbum Load (1.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.8ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.6ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.6ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.6ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (1.9ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with AlbumSerializer (70.64ms)
+Completed 200 OK in 73ms (Views: 72.4ms | ActiveRecord: 14.6ms | Allocations: 7844)
+
+
+Started GET "/api/v1/covers" for 127.0.0.1 at 2021-04-24 07:42:22 -0400
+Processing by Api::V1::CoversController#index as HTML
+[active_model_serializers]   [1m[36mCover Load (1.0ms)[0m  [1m[34mSELECT "covers".* FROM "covers"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CoverSerializer (36.48ms)
+Completed 200 OK in 41ms (Views: 36.5ms | ActiveRecord: 3.4ms | Allocations: 4814)
+
+
+Started GET "/api/v1/covers" for 127.0.0.1 at 2021-04-24 08:28:10 -0400
+Started GET "/api/v1/albums" for 127.0.0.1 at 2021-04-24 08:28:10 -0400
+Processing by Api::V1::CoversController#index as */*
+Processing by Api::V1::AlbumsController#index as */*
+[active_model_serializers]   [1m[36mCover Load (6.4ms)[0m  [1m[34mSELECT "covers".* FROM "covers"[0m
+[active_model_serializers]   [1m[36mAlbum Load (8.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (2.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (5.3ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (8.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCover Load (0.8ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCover Load (0.8ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (3.1ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CoverSerializer (291.72ms)
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+Completed 200 OK in 324ms (Views: 308.3ms | ActiveRecord: 119.0ms | Allocations: 13534)
+
+
+[active_model_serializers]   [1m[36mCover Load (0.7ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with AlbumSerializer (285.46ms)
+Completed 200 OK in 292ms (Views: 290.2ms | ActiveRecord: 106.7ms | Allocations: 14586)
+
+
+Started GET "/api/v1/albums" for 127.0.0.1 at 2021-04-24 08:32:56 -0400
+Started GET "/api/v1/covers" for 127.0.0.1 at 2021-04-24 08:32:56 -0400
+Processing by Api::V1::AlbumsController#index as */*
+Processing by Api::V1::CoversController#index as */*
+[active_model_serializers]   [1m[36mCover Load (6.9ms)[0m  [1m[34mSELECT "covers".* FROM "covers"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (5.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (3.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (3.8ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (3.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCover Load (0.7ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCover Load (0.7ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (3.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCover Load (0.8ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CoverSerializer (75.29ms)
+Completed 200 OK in 82ms (Views: 64.0ms | ActiveRecord: 17.3ms | Allocations: 9266)
+
+
+[active_model_serializers]   [1m[36mCover Load (2.3ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with AlbumSerializer (98.3ms)
+Completed 200 OK in 104ms (Views: 88.8ms | ActiveRecord: 13.5ms | Allocations: 10905)
+
+
+Started POST "/api/v1/covers" for 127.0.0.1 at 2021-04-24 08:35:53 -0400
+Processing by Api::V1::CoversController#create as */*
+  Parameters: {"stars"=>"5", "image_url"=>"https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Drake_-_Take_Care_cover.jpg/220px-Drake_-_Take_Care_cover.jpg", "album_id"=>1, "cover"=>{"image_url"=>"https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Drake_-_Take_Care_cover.jpg/220px-Drake_-_Take_Care_cover.jpg", "album_id"=>1, "stars"=>"5"}}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+  [1m[36mAlbum Load (0.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+  [1m[36mCover Create (25.1ms)[0m  [1m[32mINSERT INTO "covers" ("image_url", "album_id", "stars", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["image_url", "https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Drake_-_Take_Care_cover.jpg/220px-Drake_-_Take_Care_cover.jpg"], ["album_id", 1], ["stars", 5], ["created_at", "2021-04-24 12:35:53.443067"], ["updated_at", "2021-04-24 12:35:53.443067"]]
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (21.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Cover (0.84ms)
+Completed 202 Accepted in 105ms (Views: 5.6ms | ActiveRecord: 48.6ms | Allocations: 2832)
+
+
+Started GET "/api/v1/albums" for 127.0.0.1 at 2021-04-24 08:36:39 -0400
+Started GET "/api/v1/covers" for 127.0.0.1 at 2021-04-24 08:36:39 -0400
+Processing by Api::V1::CoversController#index as */*
+Processing by Api::V1::AlbumsController#index as */*
+[active_model_serializers]   [1m[36mCover Load (2.6ms)[0m  [1m[34mSELECT "covers".* FROM "covers"[0m
+[active_model_serializers]   [1m[36mAlbum Load (1.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (4.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (2.5ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 1]]
+[active_model_serializers]   [1m[36mAlbum Load (0.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.8ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 2]]
+[active_model_serializers]   [1m[36mAlbum Load (1.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (2.7ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 3]]
+[active_model_serializers]   [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (3.0ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 4]]
+[active_model_serializers]   [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CoverSerializer (79.65ms)
+[active_model_serializers]   [1m[36mCover Load (5.1ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 5]]
+Completed 200 OK in 84ms (Views: 72.2ms | ActiveRecord: 10.4ms | Allocations: 10527)
+
+
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with AlbumSerializer (87.84ms)
+Completed 200 OK in 93ms (Views: 76.0ms | ActiveRecord: 15.6ms | Allocations: 11860)
+
+
+Started POST "/api/v1/covers" for 127.0.0.1 at 2021-04-24 08:37:16 -0400
+Processing by Api::V1::CoversController#create as */*
+  Parameters: {"stars"=>"5", "image_url"=>"https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Drake_-_Take_Care_cover.jpg/220px-Drake_-_Take_Care_cover.jpg", "album_id"=>1, "cover"=>{"image_url"=>"https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Drake_-_Take_Care_cover.jpg/220px-Drake_-_Take_Care_cover.jpg", "album_id"=>1, "stars"=>"5"}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+  [1m[36mAlbum Load (0.4ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+  [1m[36mCover Create (0.9ms)[0m  [1m[32mINSERT INTO "covers" ("image_url", "album_id", "stars", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["image_url", "https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Drake_-_Take_Care_cover.jpg/220px-Drake_-_Take_Care_cover.jpg"], ["album_id", 1], ["stars", 5], ["created_at", "2021-04-24 12:37:16.775490"], ["updated_at", "2021-04-24 12:37:16.775490"]]
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Cover (0.6ms)
+Completed 202 Accepted in 33ms (Views: 2.0ms | ActiveRecord: 8.6ms | Allocations: 2826)
+
+
+Started GET "/api/v1/covers" for 127.0.0.1 at 2021-04-24 08:39:53 -0400
+Processing by Api::V1::CoversController#index as HTML
+[active_model_serializers]   [1m[36mCover Load (0.5ms)[0m  [1m[34mSELECT "covers".* FROM "covers"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE Album Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CoverSerializer (79.21ms)
+Completed 200 OK in 100ms (Views: 94.6ms | ActiveRecord: 3.0ms | Allocations: 6728)
+
+
+Started GET "/api/v1/covers" for 127.0.0.1 at 2021-04-24 08:40:22 -0400
+Started GET "/api/v1/albums" for 127.0.0.1 at 2021-04-24 08:40:22 -0400
+Processing by Api::V1::CoversController#index as */*
+[active_model_serializers]   [1m[36mCover Load (0.6ms)[0m  [1m[34mSELECT "covers".* FROM "covers"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+Processing by Api::V1::AlbumsController#index as */*
+[active_model_serializers]   [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (1.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+[active_model_serializers]   [1m[36mAlbum Load (0.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.7ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 1]]
+[active_model_serializers]   [1m[36mAlbum Load (0.9ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.6ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 2]]
+[active_model_serializers]   [1m[36mAlbum Load (0.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.6ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 3]]
+[active_model_serializers]   [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE Album Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCover Load (2.4ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CoverSerializer (287.18ms)
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+Completed 200 OK in 290ms (Views: 285.5ms | ActiveRecord: 4.1ms | Allocations: 11499)
+
+
+[active_model_serializers]   [1m[36mCover Load (0.8ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with AlbumSerializer (311.5ms)
+Completed 200 OK in 317ms (Views: 309.2ms | ActiveRecord: 6.9ms | Allocations: 11987)
+
+
+Started GET "/api/v1/albums" for 127.0.0.1 at 2021-04-24 08:42:38 -0400
+Processing by Api::V1::AlbumsController#index as HTML
+[active_model_serializers]   [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.5ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.8ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.5ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.6ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (1.0ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with AlbumSerializer (76.34ms)
+Completed 200 OK in 79ms (Views: 73.7ms | ActiveRecord: 4.3ms | Allocations: 6001)
+
+
+Started POST "/api/v1/albums" for 127.0.0.1 at 2021-04-24 08:48:32 -0400
+Processing by Api::V1::AlbumsController#create as */*
+  Parameters: {"title"=>"ASTROWORLD", "tracks"=>"17", "artist"=>"Travis Scott", "origin"=>"The music is loud, it sounds pretty good, the spectacle can take your breath away, and it’s immediately attractive to teens who feel music and culture in their gut more than adults.", "album"=>{"origin"=>"The music is loud, it sounds pretty good, the spectacle can take your breath away, and it’s immediately attractive to teens who feel music and culture in their gut more than adults.", "artist"=>"Travis Scott", "title"=>"ASTROWORLD", "tracks"=>"17"}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/albums_controller.rb:9:in `create'
+  [1m[36mAlbum Create (2.9ms)[0m  [1m[32mINSERT INTO "albums" ("origin", "artist", "title", "tracks", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["origin", "The music is loud, it sounds pretty good, the spectacle can take your breath away, and it’s immediately attractive to teens who feel music and culture in their gut more than adults."], ["artist", "Travis Scott"], ["title", "ASTROWORLD"], ["tracks", 17], ["created_at", "2021-04-24 12:48:32.938722"], ["updated_at", "2021-04-24 12:48:32.938722"]]
+  ↳ app/controllers/api/v1/albums_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/albums_controller.rb:9:in `create'
+[active_model_serializers]   [1m[36mCover Load (1.0ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:10:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with AlbumSerializer (19.0ms)
+Completed 200 OK in 103ms (Views: 18.8ms | ActiveRecord: 26.0ms | Allocations: 4955)
+
+
+Started GET "/api/v1/albums" for 127.0.0.1 at 2021-04-24 08:48:33 -0400
+Processing by Api::V1::AlbumsController#index as */*
+[active_model_serializers]   [1m[36mAlbum Load (0.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.5ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.6ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.9ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.6ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.7ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.5ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with AlbumSerializer (70.34ms)
+Completed 200 OK in 72ms (Views: 67.0ms | ActiveRecord: 4.6ms | Allocations: 6920)
+
+
+Started POST "/api/v1/covers" for 127.0.0.1 at 2021-04-24 08:51:34 -0400
+Processing by Api::V1::CoversController#create as */*
+  Parameters: {"stars"=>"5", "image_url"=>"https://static.spin.com/files/2018/07/download-3-1533070289-640x640.jpeg", "album_id"=>1, "cover"=>{"image_url"=>"https://static.spin.com/files/2018/07/download-3-1533070289-640x640.jpeg", "album_id"=>1, "stars"=>"5"}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+  [1m[36mAlbum Load (0.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+  [1m[36mCover Create (3.7ms)[0m  [1m[32mINSERT INTO "covers" ("image_url", "album_id", "stars", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["image_url", "https://static.spin.com/files/2018/07/download-3-1533070289-640x640.jpeg"], ["album_id", 1], ["stars", 5], ["created_at", "2021-04-24 12:51:34.646190"], ["updated_at", "2021-04-24 12:51:34.646190"]]
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/covers_controller.rb:10:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Cover (0.42ms)
+Completed 202 Accepted in 56ms (Views: 7.4ms | ActiveRecord: 9.2ms | Allocations: 2828)
+
+
+Started GET "/api/v1/covers" for 127.0.0.1 at 2021-04-24 08:51:51 -0400
+Started GET "/api/v1/albums" for 127.0.0.1 at 2021-04-24 08:51:51 -0400
+Processing by Api::V1::CoversController#index as */*
+[active_model_serializers]   [1m[36mCover Load (0.9ms)[0m  [1m[34mSELECT "covers".* FROM "covers"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+Processing by Api::V1::AlbumsController#index as */*
+[active_model_serializers]   [1m[36mAlbum Load (4.8ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (0.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (1.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (1.6ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mAlbum Load (2.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE Album Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mCACHE Album Load (0.1ms)[0m  [1m[34mSELECT "albums".* FROM "albums" WHERE "albums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/covers_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with CoverSerializer (123.33ms)
+Completed 200 OK in 127ms (Views: 114.4ms | ActiveRecord: 12.2ms | Allocations: 10054)
+
+
+[active_model_serializers]   [1m[36mAlbum Load (2.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (1.3ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.9ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (23.1ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.6ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (0.7ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCover Load (2.6ms)[0m  [1m[34mSELECT "covers".* FROM "covers" WHERE "covers"."album_id" = $1[0m  [["album_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/albums_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with AlbumSerializer (266.5ms)
+Completed 200 OK in 279ms (Views: 175.3ms | ActiveRecord: 101.5ms | Allocations: 15967)
+
+

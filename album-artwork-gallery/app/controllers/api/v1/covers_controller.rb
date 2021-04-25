@@ -17,7 +17,7 @@ end
 private
 
 def cover_params
-    params.require(cover).permit(:image_url, :album_id, :stars)
+    params.require(:cover).permit(:image_url, :album_id, :stars)
 end
 
 end
