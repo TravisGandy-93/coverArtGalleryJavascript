@@ -8,7 +8,7 @@ end
 def create
     cover = Cover.new(cover_params)
     if cover.save
-        render json: cover, status: :accepted    
+        render json: CoverSerializer.new(cover),  status: :accepted    
     else
         render json: {errors: cover.errors.full_message}, status: :unprocessible_entity
     end
