@@ -16,11 +16,7 @@ This the back end API my front end is here: https://github.com/TravisGandy-93/co
 ## Usage
 
 ```python
-import foobar
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
 ```
 
 ## Contributing
