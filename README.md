@@ -12,3 +12,21 @@ This the back end API my front end is here: https://github.com/TravisGandy-93/co
 ## Installation
 
 > Bundle your appropriate gems and load up the DOM. The application is pretty straight forward so take it for a spin.
+
+## Usage
+
+```python
+import foobar
+
+foobar.pluralize('word') # returns 'words'
+foobar.pluralize('goose') # returns 'geese'
+foobar.singularize('phenomena') # returns 'phenomenon'
+```
+
+## Contributing
+Please open an issue first to discuss what you would like to change.
+
+Please make sure to update as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
